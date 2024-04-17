@@ -1,0 +1,108 @@
+/* Mengimpor font Open Sans dari Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* Mengatur transition untuk semua elemen */
+
+* {
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Mengatur tata letak dan font untuk body */
+
+body {
+    background: #6c63ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    /* Meningkatkan kontras teks */
+}
+
+
+/* Mengatur kartu (card) */
+
+.card {
+    background: #fdfdfd;
+    border-radius: 4px;
+    width: 80vw;
+    max-width: 600px;
+    /* Maksimum lebar kartu */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 1em;
+    overflow: hidden;
+}
+
+
+/* Mengatur gambar ulang tahun */
+
+img.birthday {
+    max-width: 100%;
+    height: auto;
+    max-height: 65vh;
+    margin-bottom: 1em;
+    /* Menambahkan jarak antara gambar dan teks */
+    /* Mengatur ukuran maksimum gambar */
+}
+
+
+/* Mengatur teks di dalam kartu */
+
+.text {
+    padding: 1em;
+    color: #333;
+    /* Mengatur warna teks */
+}
+
+
+/* Mengatur opasitas untuk teks yang tidak begitu penting */
+
+.muted {
+    opacity: 0.8;
+}
+
+
+/* Mengatur ruang antara kartu dan elemen berikutnya */
+
+.space {
+    height: 50px;
+}
+
+
+/* Animasi fadeIn untuk body saat memainkan musik */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Mengatur animasi fadeIn saat memainkan musik */
+
+body.play-music {
+    animation: fadeIn 2s ease-in-out;
+    /* Sesuaikan durasi dan timing function animasi sesuai kebutuhan */
+}
+
+
+/* Aturan media queries untuk responsif di perangkat kecil */
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 90vw;
+        /* Lebar kartu menjadi 90% dari lebar layar */
+    }
+    img.birthday {
+        max-height: 40vh;
+        /* Mengurangi ketinggian gambar untuk perangkat kecil */
+    }
+}
